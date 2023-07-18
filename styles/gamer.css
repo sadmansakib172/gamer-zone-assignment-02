@@ -223,7 +223,9 @@ nav a {
 
     nav,
     nav>ul,
-    .gamer-section {
+    .gamer-section ,
+    .img-container
+    {
         flex-direction: column;
     }
 
@@ -263,6 +265,10 @@ nav a {
     .btn-margin {
         margin: 0;
     }
+    .img-container{
+        padding:0 20px;
+        margin:0 20px;
+    }
 }
 
 /* tablet styles  */
@@ -271,7 +277,9 @@ nav a {
 
     nav,
     nav>ul,
-    .gamer-section {
+    .gamer-section ,
+    .img-container
+    {
         flex-direction: column;
     }
 
