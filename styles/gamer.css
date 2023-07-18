@@ -14,41 +14,36 @@ body {
     font-family: 'Work Sans', sans-serif;
 }
 
-.title {
+/* .title {
     color: #0B0223;
-    text-align: center;
     font-family: Work Sans;
     font-size: 48px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
     text-transform: uppercase;
-}
+} */
 
 .btn-primary {
     padding: 18px 36px;
-    gap: 10px;
     border: 0;
     color: white;
     border-radius: 42px;
     background: var(--linear, linear-gradient(90deg, #FF42A5 0%, #FF42A5 100%));
-    margin-top:34px;
 }
 
 .btn-secondary {
     padding: 18px 36px;
-    gap: 10px;
     border: 0;
     color: white;
     border-radius: 42px;
     background: #4EC5F7;
-    margin-top: 34px;
 }
 .description {
     color: #534C64;
     font-size: 18px;
     font-weight: 500;
-    margin-top:12px;
+    margin-top:10px;
 }
 
 /* nav section styles  */
@@ -99,7 +94,7 @@ nav a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-right: 240px;
+    margin-right:240px;
     
 }
 
@@ -119,4 +114,33 @@ nav a {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    border:2px solid red
+}
+
+/* responsive styles  */
+
+/* For small devices  */
+@media screen and (max-width: 576px){
+    nav ,
+    nav > ul ,
+    .banner-section
+    {
+        flex-direction: column;
+    }
+    .nav-items{
+        justify-content: center;
+        gap:10px;
+    }
+    nav > ul{
+        justify-content: center;
+        width: 100%;
+    }
+    .banner-section{
+        text-align: center;
+        padding:0;
+        margin:0;
+    }
+    .banner-section img{
+        width: 100%;
+    }
 }
