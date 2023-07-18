@@ -158,9 +158,16 @@ nav a {
 @media screen and (max-width: 576px) {
 
     nav,
-    nav>ul,
-    .banner-section {
+    nav>ul ,
+    .gamer-section
+    {
         flex-direction: column;
+    }
+    .banner-section{
+        flex-direction: column-reverse;
+    }
+    nav{
+        padding:0;
     }
 
     .nav-items {
@@ -173,7 +180,9 @@ nav a {
         width: 100%;
     }
 
-    .banner-section {
+    .banner-section ,
+    .gamer-section
+    {
         text-align: center;
         padding: 0;
         margin: 0;
@@ -181,5 +190,11 @@ nav a {
 
     .banner-section img {
         width: 100%;
+    }
+    .gamer-section img{
+       width: 100%;
+    }
+    .btn-margin{
+        margin:0;
     }
 }
