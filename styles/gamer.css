@@ -48,7 +48,6 @@ body {
     font-size: 18px;
     font-weight: 500;
     margin-top: 10px;
-    text-align: center;
 }
 
 /* nav section styles  */
@@ -104,7 +103,7 @@ nav a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 240px;
+    margin-left:240px;
     background: #FFF;
 
 }
@@ -156,6 +155,9 @@ nav a {
 /* online gamer styles  */
 .online-container {
     margin-top: 180px;
+}
+.center-align{
+    text-align: center;
 }
 .img-container{
     width:1240px;
