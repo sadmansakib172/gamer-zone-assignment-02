@@ -54,7 +54,7 @@ body {
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 38px 240px;
+    margin: 30px 180px;
     background: #FFF;
     box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
 }
@@ -103,8 +103,8 @@ nav a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left:240px;
-    margin-right:240px;
+    margin-left: 180px;
+    margin-right: 180px;
     background: #FFF;
 
 }
@@ -132,7 +132,7 @@ nav a {
     display: flex;
     align-items: center;
     gap: 20px;
-    margin: 54px 240px 0 240px;
+    margin: 54px 180px 0 180px;
     background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%, rgba(255, 66, 165, 0.03) 100%);
 
 
@@ -157,86 +157,134 @@ nav a {
 .online-container {
     margin-top: 180px;
 }
-.center-align{
+
+.center-align {
     text-align: center;
 }
-.img-container{
+
+.img-container {
     /* width:1240px; */
     display: flex;
-    margin-left: 240px;
-    margin-right: 240px;
-    gap:16px;
-    margin-top:32px;
+    margin-left: 180px;
+    margin-right: 180px;
+    gap: 20px;
+    margin-top: 32px;
 }
 
 .img-container img {
-    width:250px;
+    width: 270px;
     border-radius: 16px;
     background: url(<path-to-image>), lightgray 50% / cover no-repeat;
 }
 
 
 .card {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
 }
 
 .thumbnail {
-  position: relative;
-  /* Add your styles for the card thumbnail image */
+    position: relative;
+    /* Add your styles for the card thumbnail image */
 }
 
 .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  transition: opacity 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .card:hover .overlay {
-  opacity: 1;
+    opacity: 1;
 }
 
-.fa-play{
-  font-size: 38px;
-  color: #fff;
-  
+.fa-play {
+    font-size: 38px;
+    color: #fff;
+
 }
 
 .text {
-  color: #fff;
-  font-weight: bold;
-  margin-left: 10px;
-  
+    color: #fff;
+    font-weight: bold;
+    margin-left: 10px;
+
 }
 
 /* play container styles  */
-.play-section{
-    margin:120px 240px 0 240px; 
-}
-.play-container{
-    display: flex;
-    gap:20px;
-    align-items: center;
-}
-.play-container .img-1{
-   width:100%;
-   margin-left: 50px;
-}
-.img-2{
-    width: 150px;
-    position: relative;
-    top:-70px;
-   
+.play-section {
+    margin: 120px 180px 0 180px;
 }
 
+.play-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.play-container .img-1 {
+    width: 640px;
+    margin-left: 50px;
+}
+
+.img-2 {
+    width: 150px;
+    position: relative;
+    top: -70px;
+
+}
+
+/* games type section styles  */
+.games-type-section {
+    background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%, rgba(255, 66, 165, 0.03) 100%);
+    margin: 100px 180px 130px 180px;
+}
+
+.games {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.game:hover {
+    border-radius: 50px;
+    background: #FFF;
+    border:1px solid red;
+    padding-left: 28px;
+    width: 270px;
+    background: var(--linear, linear-gradient(90deg, #FF42A5 0%, #FF42A5 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.game img {
+    width: 50px;
+    border-radius: 50px;
+    background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+}
+
+.game-title {
+    color: #0B0223;
+    font-size: 18px;
+    font-weight: 600;
+}
 
 /* responsive styles  */
 
@@ -245,10 +293,10 @@ nav a {
 
     nav,
     nav>ul,
-    .gamer-section ,
-    .img-container ,
-    .play-container
-    {
+    .gamer-section,
+    .img-container,
+    .play-container,
+    .game {
         flex-direction: column;
     }
 
@@ -256,8 +304,13 @@ nav a {
         flex-direction: column-reverse;
     }
 
-    nav {
+    nav ,
+    .nav-items ,
+    nav > ul ,
+    .menu-together
+    {
         padding: 0;
+        margin:0;
     }
 
     .nav-items {
@@ -268,13 +321,16 @@ nav a {
     nav>ul {
         justify-content: center;
         width: 100%;
+        padding:0;
     }
 
     .banner-section,
-    .gamer-section {
+    .play-container ,
+    .gamer-section, 
+    .online-container{
         text-align: center;
         padding: 0;
-        margin: 0;
+        margin:40px 0 0 0;
     }
 
     .banner-section img {
@@ -284,32 +340,53 @@ nav a {
     .gamer-section img {
         width: 100%;
     }
-    .img-container{
-        margin:0;
-        padding:0;
-       }
-       .img-container img{
+
+    .img-container {
+        margin: 0;
+        padding: 0;
+    }
+
+    .img-container img {
         width: 100%;
-       }
+    }
 
     .btn-margin {
         margin: 0;
     }
-    .play-section{
-        margin:0;
-        padding:0;
+
+    .play-section {
+        margin: 0;
+        padding: 0;
     }
-    .play-content{
+
+    .play-content {
         text-align: center;
     }
-   .img-div .img-1{
-    width: 100%;
-    margin:0 10px;
-   }
-   .img-div .img-2{
-    position: static;
-    width:100%;
-   }
+
+    .img-div .img-1 {
+        width: 100%;
+        margin: 0 10px;
+    }
+
+    .img-div .img-2 {
+        position: static;
+        width: 100%;
+    }
+
+    .games {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .game:hover {
+        border-radius: 50px;
+        background: #FFF;
+        border:1px solid red;
+        padding-left: 8px;
+        width: 100%;
+        background: var(--linear, linear-gradient(90deg, #FF42A5 0%, #FF42A5 100%));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 }
 
 /* tablet styles  */
@@ -318,10 +395,9 @@ nav a {
 
     nav,
     nav>ul,
-    .gamer-section ,
-    .img-container ,
-    .play-container
-    {
+    .gamer-section,
+    .img-container,
+    .play-container {
         flex-direction: column;
     }
 
@@ -365,21 +441,41 @@ nav a {
     .btn-margin {
         margin: 0;
     }
-    .play-container{
+
+    .play-container {
         text-align: center;
     }
 
-    .play-section{
-        margin:0;
-        padding:0;
+    .play-section {
+        margin: 0;
+        padding: 0;
     }
-   .img-div .img-1{
-    width: 100%;
-    margin:0;
-   }
-   .img-div .img-2{
-    position: static;
-    width:100%;
-    
-   }
+
+    .img-div .img-1 {
+        width: 100%;
+        margin: 0;
+    }
+
+    .img-div .img-2 {
+        position: static;
+        width: 100%;
+
+    }
+    .games {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .game:hover {
+        border-radius: 50px;
+        background: #FFF;
+        border:1px solid red;
+        padding: 8px;
+        width: 100%;
+        background: var(--linear, linear-gradient(90deg, #FF42A5 0%, #FF42A5 100%));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .online-container{
+        margin-top:40px;
+    }
 }
