@@ -18,7 +18,7 @@ body {
     color: #0B0223;
     font-size: 42px;
     font-weight: 600;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .span-secondary-title {
@@ -104,6 +104,7 @@ nav a {
     justify-content: space-between;
     align-items: center;
     margin-left:240px;
+    margin-right:240px;
     background: #FFF;
 
 }
@@ -160,9 +161,10 @@ nav a {
     text-align: center;
 }
 .img-container{
-    width:1240px;
+    /* width:1240px; */
     display: flex;
     margin-left: 240px;
+    margin-right: 240px;
     gap:16px;
     margin-top:32px;
 }
@@ -215,6 +217,26 @@ nav a {
   
 }
 
+/* play container styles  */
+.play-section{
+    margin:120px 240px 0 240px; 
+}
+.play-container{
+    display: flex;
+    gap:20px;
+    align-items: center;
+}
+.play-container .img-1{
+   width:100%;
+   margin-left: 50px;
+}
+.img-2{
+    width: 150px;
+    position: relative;
+    top:-70px;
+   
+}
+
 
 /* responsive styles  */
 
@@ -224,7 +246,8 @@ nav a {
     nav,
     nav>ul,
     .gamer-section ,
-    .img-container
+    .img-container ,
+    .play-container
     {
         flex-direction: column;
     }
@@ -261,14 +284,32 @@ nav a {
     .gamer-section img {
         width: 100%;
     }
+    .img-container{
+        margin:0;
+        padding:0;
+       }
+       .img-container img{
+        width: 100%;
+       }
 
     .btn-margin {
         margin: 0;
     }
-    .img-container{
-        padding:0 20px;
-        margin:0 20px;
+    .play-section{
+        margin:0;
+        padding:0;
     }
+    .play-content{
+        text-align: center;
+    }
+   .img-div .img-1{
+    width: 100%;
+    margin:0 10px;
+   }
+   .img-div .img-2{
+    position: static;
+    width:100%;
+   }
 }
 
 /* tablet styles  */
@@ -278,7 +319,8 @@ nav a {
     nav,
     nav>ul,
     .gamer-section ,
-    .img-container
+    .img-container ,
+    .play-container
     {
         flex-direction: column;
     }
@@ -323,4 +365,21 @@ nav a {
     .btn-margin {
         margin: 0;
     }
+    .play-container{
+        text-align: center;
+    }
+
+    .play-section{
+        margin:0;
+        padding:0;
+    }
+   .img-div .img-1{
+    width: 100%;
+    margin:0;
+   }
+   .img-div .img-2{
+    position: static;
+    width:100%;
+    
+   }
 }
